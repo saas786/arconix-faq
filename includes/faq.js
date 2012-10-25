@@ -10,5 +10,12 @@ jQuery(document).ready( function() {
     //Slide up and down on click
     jQuery(".arconix-faq-title").click(function(){
         jQuery(this).next(".arconix-faq-content").slideToggle();
+    });    
+    // Expand/Collapse all the FAQ items
+    jQuery(".arconix-faq-button").click(function () {
+      jQuery("div.arconix-faq-content").each(function(){
+        jQuery(this).slideToggle();
+      });
     });
+
 });
