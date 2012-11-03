@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Arconix FAQ ===
 Contributors: jgardner03
 Tags: arconix, faq, toggle
 Requires at least: 3.1
