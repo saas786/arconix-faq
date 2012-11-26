@@ -185,13 +185,13 @@ function dashboard_widget_output() {
     ) );
 
     echo '<div class="acf-widget-bottom"><ul>';
-?>
-        <li><a href="http://arcnx.co/afwiki"><img src="<?php echo ACF_URL . 'images/page-16x16.png' ?>">Wiki Page</a></li>
-        <li><a href="http://arcnx.co/afhelp"><img src="<?php echo ACF_URL . 'images/help-16x16.png' ?>">Support Forum</a></li>
-        <li><a href="http://arcnx.co/aftrello"><img src="<?php echo ACF_URL . 'images/trello-16x16.png' ?>">Dev Board</a></li>
+    ?>
+        <li><a href="http://arcnx.co/afwiki"><img src="<?php echo ACF_IMAGES_URL . 'page-16x16.png' ?>">Wiki Page</a></li>
+        <li><a href="http://arcnx.co/afhelp"><img src="<?php echo ACF_IMAGES_URL . 'help-16x16.png' ?>">Support Forum</a></li>
+        <li><a href="http://arcnx.co/aftrello"><img src="<?php echo ACF_IMAGES_URL . 'trello-16x16.png' ?>">Dev Board</a></li>
+        <li><a href="http://arcnx.co/afsource"><img src="<?php echo ACF_IMAGES_URL . 'github-16x16.png'; ?>">Source Code</a></li>
     <?php
-    echo '</ul></div>';
-    echo '</div>';
+    echo '</ul></div></div>';
 
     // handle the styling
     echo '<style type="text/css">
