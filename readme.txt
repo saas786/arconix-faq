@@ -24,7 +24,7 @@ Activate Arconix-FAQ in the "Plugins" admin panel using the "Activate" link.
 
 == Upgrade Notice ==
 
-Upgrade normally via your Wordpress admin -> Plugins panel.
+Upgrade normally via your WordPress admin -> Plugins panel.
 
 == Frequently Asked Questions ==
 
@@ -33,12 +33,16 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 = Where can I find more information on how to use the plugin?  =
 
-* Visit the plugin's [Wiki Page](http://arcnx.co/afwiki "Arconix FAQ Wiki") for documentation
+* Visit the plugin's [Wiki Page](http://arcnx.co/afwiki) for documentation
 * Tutorials on advanced plugin usage can be found at [Arconix Computers](http://arconixpc.com/tag/arconix-faq)
 
 = I have a problem or a bug =
 
-* Check out the WordPress [support forum](http://arcnx.co/afhelp)
+* Check out the WordPress [support forum](http://arcnx.co/afhelp) or the [Issues section on Github](http://arcnx.co/afissues)
+
+= I have a great idea for your plugin! =
+
+That's fantastic! Feel free to submit a pull request over at [Github](http://arcnx.co/afsource), add an idea to the [Trello Board](http://arcnx.co/aftrello), or you can contact me through [Twitter](http://arcnx.co/twitter), [Facebook](http://arcnx.co/facebook) or my [Website](http://arcnx.co/1)
 
 = Can you add X option or functionality? =
 
@@ -50,21 +54,21 @@ I can certainly look into it. Contact me through [Twitter](http://arcnx.co/twitt
 3. Grouping and Toggling display
 
 == Changelog ==
-= 1.1.1 - 2012.08.22 =
-* minor update to allow the user to specify a FAQ group they'd like to display
+= 1.1.1 =
+* minor fix to allow the user to specify a FAQ group they'd like to display
 
-= 1.1 - 2012.08.14 =
+= 1.1 =
 * Added a "group" taxonomy for displaying the FAQ items in groups
 * Updated the CSS with more inline documentation
 * fixed a couple minor bugs
 
-= 1.0.5 - 2012.07.20 =
+= 1.0.5 =
 * fixed a critical bug in the shortcode
 
-= 1.0.4 - 2012.07.17 =
+= 1.0.4 =
 * fixed a display bug which caused all faq's to be loaded before any content
 
-= 1.0.3 - 2012.04.25 =
+= 1.0.3 =
 * Show all FAQs and no longer paginate (overridable in the shortcode)
 * fix broken dashboard widget
 
