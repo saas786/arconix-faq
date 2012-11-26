@@ -29,11 +29,10 @@ class Arconix_FAQ {
      * @since 1.0
      * @version 1.2
      */
-    function __construct() {
-        
+    function __construct() {        
         /* Set the necessary constants */
-        add_action( 'plugins_loaded', array( $this, 'constants' ), 1 );
-
+        $this->constants();
+        
         /* Run the necessary functions and add them to their respective hooks */
         $this->hooks();
 
@@ -41,8 +40,7 @@ class Arconix_FAQ {
         register_activation_hook( __FILE__, array( $this, 'activation' ) );
         
         /* Register deactivation hook */
-        register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );
-        
+        register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );        
     }
     
     /**
@@ -51,14 +49,12 @@ class Arconix_FAQ {
      * @since 1.2
      */
     function constants() {
-        
-        /* Set the constant for the plugin version */
         define( 'ACF_VERSION', '1.2' );
-
-        /* Set constant path to the plugin directory */
-        define( 'ACF_URL', plugin_dir_url( __FILE__ ) );
-        define( 'ACF_INCLUDES_DIR', plugin_dir_path( __FILE__ ) . 'includes' );
-
+        define( 'ACF_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+        define( 'ACF_INCLUDES_URL', trailingslashit( ACF_URL . 'includes' ) );
+        define( 'ACF_IMAGES_URL', trailingslashit( ACF_URL . 'images' ) );
+        define( 'ACF_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+        define( 'ACF_INCLUDES_DIR', trailingslashit( ACF_DIR . 'includes' ) );
     }
     
     /**
@@ -66,14 +62,13 @@ class Arconix_FAQ {
      * 
      * @since 1.2
      */
-    function hooks() {
-        
+    function hooks() {        
         /* Create the Post Type and Taxoniomy */
         add_action( 'init', 'create_post_type', 11 );
-        add_action( 'init', 'create_taxonomy', 11 );        
+        add_action( 'init', 'create_taxonomy', 11 );
         
         /* Post type updated messages */
-        add_filter( 'post_updated_messages', 'updated_messages' );        
+        add_filter( 'post_updated_messages', 'updated_messages' );
 
         /* Modify the Post Type Admin screen */
         add_action( 'admin_head', 'post_type_admin_image' );
@@ -106,7 +101,7 @@ class Arconix_FAQ {
      * @since 1.2
      */
     function activation() {
-        // flush_rewrite_rules();
+        flush_rewrite_rules();
     }
 
     /**
