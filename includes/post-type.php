@@ -1,11 +1,11 @@
 <?php
 /**
  * Create FAQ Post Type
- * 
- * @since 1.2
+ *
+ * @since 0.9
+ * @version 1.2
  */
-function create_post_type() {
-
+function faq_create_post_type() {
     $args = apply_filters( 'arconix_faq_post_type_args', array(
         'labels' => array(
             'name' => __( 'FAQ', 'acf' ),
@@ -24,7 +24,7 @@ function create_post_type() {
         'public' => true,
         'query_var' => true,
         'menu_position' => 20,
-        'menu_icon' => ACF_URL . 'images/faq-16x16.png',
+        'menu_icon' => ACF_IMAGES_URL . 'faq-16x16.png',
         'has_archive' => true,
         'supports' => array( 'title', 'editor', 'revisions' ),
         'rewrite' => array( 'slug' => 'faqs', 'with_front' => false )

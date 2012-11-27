@@ -2,14 +2,14 @@
 
 /**
  * Change the Post Updated messages
- * 
+ *
  * @global type $post
  * @global type $post_ID
  * @param type $messages
  * @return type $messages
  * @since 0.9
  */
-function updated_messages( $messages ) {
+function faq_updated_messages( $messages ) {
     global $post, $post_ID;
 
     $messages['faq'] = array(
@@ -34,10 +34,10 @@ function updated_messages( $messages ) {
 
 /**
  * Add the post-type icon to the admin screen
- * 
+ *
  * @since 0.9
  */
-function post_type_admin_image() {
+function faq_post_type_admin_image() {
     printf( '<style type="text/css" media="screen">.icon32-posts-faq { background: transparent url(%s) no-repeat !important; }</style>', ACF_URL . 'images/faq-32x32.png' );
 }
 
@@ -47,15 +47,15 @@ function post_type_admin_image() {
  * @param array $columns
  * @return string $columns
  * @since 0.9
+ * @version 1.2
  */
-function columns_filter( $columns ) {
-
+function faq_columns_filter( $columns ) {
     $columns = array(
         "cb" => "<input type=\"checkbox\" />",
-        "title" => "FAQ Title",
-        "faq_content" => "Details",
-        'faq_groups' => __( 'Groups', 'acf' ),
-        "date" => "Date"
+        "title" => __( 'FAQ Title', 'acf' ),
+        "faq_content" => __( 'Answer', 'acf' ),
+        'faq_groups' => __( 'Group', 'acf' ),
+        "date" => __( 'Date', 'acf' )
     );
 
     return $columns;
@@ -67,9 +67,9 @@ function columns_filter( $columns ) {
  * @global type $post
  * @param type $column
  * @since 0.9
+ * @version 1.1
  */
-function column_data( $column ) {
-
+function faq_column_data( $column ) {
     global $post;
 
     switch( $column ) {
@@ -90,7 +90,7 @@ function column_data( $column ) {
  * @link http://bajada.net/2010/06/08/how-to-add-custom-post-types-and-taxonomies-to-the-wordpress-right-now-dashboard-widget
  * @version 1.0
  */
-function right_now() {
+function faq_right_now() {
     // Define the post type text here, allowing us to quickly re-use this code in other projects
     $ac_pt = 'faq'; // must be the registered post type
     $ac_pt_p = 'FAQs';
@@ -161,13 +161,13 @@ function right_now() {
  * @since 1.0.3
  * @version 1.1
  */
-function register_dashboard_widget() {
+function faq_register_dashboard_widget() {
     wp_add_dashboard_widget( 'ac-faq', 'Arconix FAQ', 'dashboard_widget_output' );
 }
 
 /**
  * Add a widget to the dashboard
- * 
+ *
  * @since 1.0
  * @version 1.1
  */

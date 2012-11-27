@@ -4,7 +4,7 @@
  *
  * @since 1.1
  */
-function create_taxonomy() {
+function faq_create_taxonomy() {
 
     $args = apply_filters( 'arconix_faq_taxonomy_args', array(
         'labels' => array(
