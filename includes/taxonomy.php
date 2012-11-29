@@ -30,6 +30,6 @@ function faq_create_taxonomy() {
         'query_var' => true,
         'rewrite' => array( 'slug' => 'group' )
     ) );
+    register_taxonomy( 'group', 'faq', $args );
 }
 
-register_taxonomy( 'group', 'faq', $args );
