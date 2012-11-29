@@ -29,6 +29,6 @@ function faq_create_post_type() {
         'supports' => array( 'title', 'editor', 'revisions' ),
         'rewrite' => array( 'slug' => 'faqs', 'with_front' => false )
     ) );
-}
 
     register_post_type( 'faq', $args );
+}
